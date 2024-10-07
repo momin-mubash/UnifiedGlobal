@@ -16,4 +16,5 @@ def fetch_articles_from_website(url):
         print(f"Failed to access {url}")
 
 if __name__ == '__main__':
-    fetch_articles_from_website('https://example.com/news')
+    fetch_articles_from_website('https://www.indiatoday.in/')
+

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import ArticleCard from './components/ArticleCard';
 import DigSection from './components/DigSection';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Profile from './components/Profile';
 
 const App = () => {
   return (
@@ -12,8 +13,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/digs" element={<DigSection />} />
-          {/* Add other routes as needed */}
+          <Route path="/digs" element={<Dig />} />
+          <Route path="/users" element={<User />} />
         </Routes>
       </div>
     </Router>
@@ -25,6 +26,21 @@ const Home = () => (
     <h2>Recent Articles</h2>
     <ArticleCard />
     {/* Render articles from various sources */}
+  </div>
+);
+
+const Dig = () => (
+  <div className="container">
+    <h2>Your Digs</h2>
+    <DigSection />
+    {/* Render digs for a particular user */}
+  </div>
+);
+
+const User= () => (
+  <div className="container">
+    <Profile />
+    {/* users info */}
   </div>
 );
 

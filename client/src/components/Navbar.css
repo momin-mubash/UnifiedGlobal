@@ -1,0 +1,240 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+  }
+  
+  /* Logo styles */
+  .navbar .navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+  }
+  
+  /* Search bar styles */
+  .navbar .navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    order: 2;
+  }
+  
+  .navbar .navbar-center input {
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    padding: 8px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: larger;
+    margin: 10px 0;
+  }
+  
+  /* Login and profile dropdown */
+  .navbar .navbar-right {
+    display: flex;
+    align-items: center;
+    order: 3;
+  }
+  
+  .navbar .navbar-right .login {
+    margin: 0px 4px;
+    padding: 4px;
+    width: 80px;
+    height: 40px;
+    font-size: larger;
+    cursor: pointer;
+  }
+  
+  /* Settings dropdown */
+  .settings-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Hide the dropdown content by default */
+  .settings-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style the dropdown buttons */
+  .settings-dropdown .dropdown-content button {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  
+  
+  /* Button hover effect */
+  .settings-dropdown .dropdown-content button:hover {
+    background-color: #ddd;
+    
+  }
+  
+  /* Show the dropdown content when the dropdown is active */
+  .settings-dropdown.active .dropdown-content {
+    display: block; /* Display the dropdown when active */
+  }
+  
+  /* Style the Settings button */
+  .settings-dropdown button {
+   background-color: #007bff;
+   color: white;
+    padding: 4px;
+    font-size: larger;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  /*settings button hover*/
+  .settings-dropdown button:hover{
+    background-color:#7b9fc6 ;
+  }
+  
+  /* Theme toggle button */
+  .navbar .theme-toggle {
+    margin-left: 4px;
+    width: 80px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: larger;
+    padding: 4px;
+    border: 1px solid black;
+    cursor:pointer;
+  }
+
+  /*theme-toggle hover*/
+  .navbar .theme-toggle:hover{
+    background-color: #ddd;
+
+  }
+  
+  /* Responsive styles */
+  
+  /* Medium devices (tablets, 768px and below) */
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .navbar .navbar-center {
+        order: 3;
+        width: 100%;
+    }
+  
+    .navbar .navbar-right {
+        order: 2;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+  
+    .navbar .navbar-right .profile-dropdown {
+        margin-left: 10px;
+    }
+  
+    .navbar .navbar-logo {
+        order: 1;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+  
+    .navbar .navbar-center input {
+        width: 100%;
+        max-width: none;
+    }
+  }
+  
+ /* Small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center; /* Center all elements in the navbar */
+    }
+
+    /* Center the logo */
+    .navbar .navbar-logo {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center; /* Center the logo text */
+    }
+
+    /* Center the navbar-right elements */
+    .navbar .navbar-right {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Center the navbar-right elements */
+        gap: 5px; /* Add space between the buttons */
+        margin-top: 5px;
+        align-items: center; /* Center them vertically */
+    }
+
+    /* Ensure all buttons (login, settings, theme toggle) have the same size */
+    .navbar .navbar-right .login, 
+    .settings-dropdown button, 
+    .theme-toggle {
+        width: 70px;  /* Same width */
+        height: 35px; /* Same height */
+        font-size: 14px; /* Same font size */
+        font-weight: normal; /* Ensure consistent font weight */
+        padding: 4px; /* Same padding */
+        border-radius: 4px; /* Consistent rounded corners */
+    }
+
+    /* Override specific .theme-toggle styles */
+    .theme-toggle {
+        width: 70px !important;  /* Override larger width */
+        height: 35px !important; /* Override larger height */
+        font-size: 14px !important; /* Override larger font size */
+        font-weight: normal !important; /* Override bold font */
+        padding: 4px !important; /* Ensure consistent padding */
+        border: 2px solid black !important;
+    }
+
+    /* Make the search bar take up full width */
+    .navbar .navbar-center {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar .navbar-center input {
+        width: 100%;
+        max-width: none;
+        font-size: medium;
+    }
+
+    /* Adjust profile dropdown margin */
+    .navbar .profile-dropdown {
+        margin-left: 0;
+    }
+}

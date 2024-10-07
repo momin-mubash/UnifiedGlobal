@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css'; // Custom styles
 import axios from 'axios'; // For making API requests
+import SettingsDropdown from './dropdown/settingsDropdown';
+
 
 const Navbar = () => {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -56,20 +57,18 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <p>Loading user data...</p> /* Display while user data is loading */
+          <button className='login'>Login</button> /* if the user is visiting the website for the first time*/
         )}
+        <SettingsDropdown />
+        <button className='theme-toggle' onClick={toggleTheme}>{darkTheme ? 'Light' : 'Dark'}</button>
 
-        <div className="settings-dropdown">
-          <button>Settings</button>
-          <div className="dropdown-content">
-            <button>Translate</button>
-            <button>Log out</button>
-          </div>
-        </div>
-        <button onClick={toggleTheme}>{darkTheme ? 'Light Mode' : 'Dark Mode'}</button>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+
+
+
