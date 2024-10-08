@@ -4,6 +4,7 @@ import ArticleCard from './components/ArticleCard';
 import DigSection from './components/DigSection';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Profile from './components/Profile';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/digs" element={<Dig />} />
           <Route path="/users" element={<User />} />
         </Routes>
+      <Footer/>
       </div>
     </Router>
   );
