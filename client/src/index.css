@@ -1,5 +1,51 @@
+:root {
+  --navbar_background:white;
+  --logo_color: #007bff;
+  --searchbar_backcolor: #f2f3fd;
+  --searchbar_color: rgb(178, 171, 171);
+  --login_color:rgb(97, 94, 94);
+  --login_color_hover:black;
+  --setdrop_button_color:rgb(97, 94, 94);
+  --setdrop_button_color_hover:black;
+  --setdrop_content_backcolor:#f9f9f9;
+  --setdrop_content_button_backcolor:white;
+  --setdrop_content_button_color:black;
+  --setdrop_content_button_backcolor_hover:#f2f3fd;
+  --setdrop_content_button_color_hover:black;
+  --body_background: #f2f3fd;
+  --footer_background:#f8f9fa;
+  --body_color: black;
+  --link_color: navy;
+}
+
+[data-theme="dark"] {
+  --navbar_background: rgb(32, 33, 36);
+  --logo_color: rgb(198, 189, 189);
+  --searchbar_backcolor:#353739;
+  --searchbar_color: rgb(198, 189, 189);
+  --login_color:rgb(198, 189, 189);
+  --login_color_hover:white;
+  --setdrop_button_color:rgb(198, 189, 189);
+  --setdrop_button_color_hover:white;
+  --setdrop_content_backcolor:rgb(32, 33, 36);
+  --setdrop_content_button_backcolor:rgb(32, 33, 36);
+  --setdrop_content_button_color:rgb(198, 189, 189);
+  --setdrop_content_button_backcolor_hover:#353739;
+  --setdrop_content_button_color_hover:white;
+  --body_background: #353739;
+  --footer_background: rgb(32, 33, 36);
+  --body_color: rgb(236, 227, 227);
+  --link_color: cyan;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  background-color: var(--body_background);
+  color: var(--body_color);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: var(--link_color);
 }

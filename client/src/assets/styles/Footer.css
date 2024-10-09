@@ -1,5 +1,5 @@
 .footer {
-    background-color: #f8f9fa;
+    background-color: var(--footer_background);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     padding: 2px;
     text-align: center;

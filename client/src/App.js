@@ -5,6 +5,7 @@ import DigSection from './components/DigSection';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Profile from './components/Profile';
 import Footer from './components/Footer';
+import './App.css';
 
 const App = () => {
   return (

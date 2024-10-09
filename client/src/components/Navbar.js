@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './Navbar.css'; // Custom styles
+import '../assets/styles/Navbar.css'; // Custom styles
 import axios from 'axios'; // For making API requests
 import SettingsDropdown from './dropdown/settingsDropdown';
-
+import DarkMode from './DarkMode';
 
 const Navbar = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
   const [user, setUser] = useState(null);  // Store user details
   const [digs, setDigs] = useState([]);    // Store user digs
 
@@ -25,10 +24,6 @@ const Navbar = () => {
     fetchUserData();
   }, []);
 
-  const toggleTheme = () => {
-    setDarkTheme(!darkTheme);
-    document.body.classList.toggle('dark-theme', darkTheme);
-  };
 
   return (
     <nav className="navbar sticky">
@@ -60,7 +55,7 @@ const Navbar = () => {
           <button className='login'>Login</button> /* if the user is visiting the website for the first time*/
         )}
         <SettingsDropdown />
-        <button className='theme-toggle' onClick={toggleTheme}>{darkTheme ? 'Light' : 'Dark'}</button>
+        <DarkMode />
 
       </div>
     </nav>
