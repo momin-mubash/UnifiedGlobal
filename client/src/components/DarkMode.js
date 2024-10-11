@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as Sun } from "../assets/images/Sun.svg";
 import { ReactComponent as Moon } from "../assets/images/Moon.svg";
-import "./DarkMode.css";
+import "../assets/styles/DarkMode.css";
 
 const DarkMode = () => {
     //setting dark mode
@@ -23,10 +23,9 @@ const DarkMode = () => {
     }
     const toggleTheme = (e) => {
         if(e.target.checked) {
-            console.log("switched to dark mode")
             setDarkMode();
         }
-        else {console.log("switching to light mode")
+        else {
          setLightMode();}
     };
     return (

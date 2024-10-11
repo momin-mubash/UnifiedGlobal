@@ -1,0 +1,45 @@
+.article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .article-card {
+    width: 48%; /* Two cards in each row */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .article-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .article-card h3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .article-card h4 {
+    font-weight: normal;
+    color: #666;
+  }
+  
+  .article-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .article-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .article-card {
+      width: 100%; /* Single card per row on smaller screens */
+    }
+  }
+  
